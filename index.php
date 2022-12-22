@@ -2,7 +2,7 @@
 $title = "Page d'accueil";
 ?>
 
-<?php require 'header.php'; ?>
+<?php require 'elements/header.php'; ?>
 
 <!-- Begin page content -->
 <main class="flex-shrink-0">
@@ -13,6 +13,6 @@ $title = "Page d'accueil";
   </div>
 </main>
 
-<?php require 'footer.php'; ?>
+<?php require 'elements/footer.php'; ?>
 
 </html>

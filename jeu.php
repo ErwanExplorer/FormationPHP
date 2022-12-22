@@ -50,7 +50,7 @@ if (isset($_GET['cornet'])) {
     }
 }
 
-require "header.php";
+require "elements/header.php";
 ?>
 
 <div class="row">
@@ -128,4 +128,4 @@ require "header.php";
 </div>
 
 
-<?php require "footer.php"; ?>
+<?php require "elements/footer.php"; ?>
