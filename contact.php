@@ -1,5 +1,5 @@
 <?php 
-
+session_start();
 $title = 'Contact';
 $nav = "contact";
 require_once 'config.php';
@@ -19,6 +19,10 @@ require 'elements/header.php'; ?>
 <div class="container">
     <div class="row">
         <div class="col-md-8">
+            <h2>Debug</h2>
+            <pre>
+                <?php var_dump($_SESSION);?>
+            </pre>
             <h1 class="mt-5">Nous-Contactez</h1>
             <p class='text-center'>Contactez-nous par mail : contact.pro@Formationphp.org</p>
         </div>

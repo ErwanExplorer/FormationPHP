@@ -1,4 +1,9 @@
 <?php
+session_start();
+$_SESSION['user'] = [
+    'name' => 'John',
+    'passworld' => '0000'
+];
 $title = "Page d'accueil";
 ?>
 
