@@ -1,4 +1,5 @@
 <footer class="footer mt-auto py-3 bg-light">
+  <hr>
   <div class="container">
     <span class="text-muted">Copyright 2022 FormationPHP.</span>
   </div>
@@ -7,6 +8,13 @@
 
 <div class="col-md-4"></div>
 <div class="col-md-4">
+<form action="/newletter.php" method="post" class="form-inline">
+    <div class="form-group">
+        <input type="email" name="email" placeholder="Entrer votre email" class="form-control" required>
+    </div>
+    <button type="submit" class="btn btn-primary">S'inscrire</button>
+</form>
+</div>
 <div class="col-md-4">
     <h5>Navigation</h5>
 
