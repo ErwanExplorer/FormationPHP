@@ -2,7 +2,7 @@
 session_start();
 $title = 'Contact';
 $nav = "contact";
-require_once 'config.php';
+require_once 'data/config.php';
 require_once 'function.php';
 date_default_timezone_set('Europe/Paris');
 //Récuper l'heure d'aujourd'hui $heure
