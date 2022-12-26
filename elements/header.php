@@ -1,3 +1,10 @@
+<?php
+require_once dirname(__DIR__) . DIRECTORY_SEPARATOR . 'functions' . DIRECTORY_SEPARATOR . 'auth.php';
+
+
+?>
+
+
 <!doctype html>
 <html lang="fr" class="h-100">
   
@@ -39,22 +46,33 @@
   </head>
   <body class="d-flex flex-column h-100">
     
-<header>
+  <header>
   <!-- Fixed navbar -->
-  <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+  <nav class="navbar navbar-expand-md navbar-dark bg-dark mb-4">
   <div class="container-fluid">
     <a class="navbar-brand" href="#">FormationPHP</a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarCollapse">
-      <ul class="navbar-nav mr-auto">
+      <ul class="navbar-nav">
       <?php 
              $class = 'nav-link';
             require "nav.php"; ?>
       </ul>
-      <form class="d-flex" role="search">
-          <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+
+      <ul class='navbar-nav'>
+          <?php if (est_connecte()): ?>
+          <li class="nav-item">
+              <a href="logout.php" class='nav-link'>Se déconnecter</a>
+          </li>
+          <?php else: ?>
+            
+          <?php endif ?>
+      </ul>
+
+
+      <form class="d-flex" role="search" action="logout.php" method="post">
           <button class="btn btn-outline-success" type="submit">Search</button>
         </form>
     </div>

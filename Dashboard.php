@@ -1,6 +1,8 @@
 <?php 
-require  'functions/compteur.php';
+require  'functions/auth.php';
+user_connect();
 
+require  'functions/compteur.php';
 $annee  = (int)date('Y');
 $annee_selection  = empty($_GET['annee']) ? $annee : (int)$_GET['annee'];
 $mois_selection = empty($_GET['mois']) ? date('m') :  $_GET['mois'];
