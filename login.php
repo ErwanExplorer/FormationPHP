@@ -1,8 +1,10 @@
 <?php
+password_hash('admin', PASSWORD_DEFAULT, ['cost' => 12]);
+$password = '$2y$12$QPTqntBySoH5k3hxG8rbH.Cm6ecZ5rsfT/KySADjDKW2LxlTgNEbm';
 
 $error = null;
 if (!empty($_POST['pseudo']) && !empty($_POST['password'])) {
-    if ($_POST['pseudo'] === 'Admin' && $_POST['password'] === 'admin') {
+    if ($_POST['pseudo'] === 'Admin' && password_verify($_POST['password'], $password)) {
         session_start();
         $_SESSION['connecte'] = 1;
         header('location: /dashboard.php');
